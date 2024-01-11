@@ -7,7 +7,7 @@ public class MovementCharacter : MonoBehaviour
     private CharacterController characterController;
     private Animator animator;
 
-    private Vector3 moveDirection = Vector3.zero;
+    public Vector3 moveDirection = Vector3.zero;
 
     [SerializeField] private float speed = 5.0f;
     [SerializeField] private float gravity = 9.81f;
