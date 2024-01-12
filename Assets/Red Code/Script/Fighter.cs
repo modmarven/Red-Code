@@ -22,6 +22,7 @@ public class Fighter : MonoBehaviour
     void Update()
     {
         RightAttack();
+        LeftAttack();
     }
 
     private void RightAttack()
@@ -56,6 +57,42 @@ public class Fighter : MonoBehaviour
             else
             {
                 anim.SetBool("hit2", false);
+            }
+        }
+    }
+
+    private void LeftAttack()
+    {
+
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f && anim.GetCurrentAnimatorStateInfo(0).IsName("hit1"))
+        {
+            anim.SetBool("hit1", false);
+        }
+
+        if (Time.time - lastClickTime > maxComDelay)
+        {
+            noOfClick = 0;
+        }
+
+        if (Time.time > nextFireTime)
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                lastClickTime = Time.time;
+                noOfClick++;
+
+                if (noOfClick == 1)
+                {
+                    anim.SetBool("hit1", true);
+                }
+
+                noOfClick = Mathf.Clamp(noOfClick, 0, 3);
+
+            }
+
+            else
+            {
+                anim.SetBool("hit1", false);
             }
         }
     }
