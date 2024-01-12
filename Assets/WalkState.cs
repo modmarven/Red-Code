@@ -8,11 +8,15 @@ public class WalkState : StateMachineBehaviour
     private float timer;
     List<Transform> wayPoint = new List<Transform>();
     NavMeshAgent enemy;
+    Transform player;
+    public float playerDistance = 8.0f;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         enemy = animator.GetComponent<NavMeshAgent>();
+        enemy.speed = 1.5f;
         timer = 0;
         GameObject patroll = GameObject.FindGameObjectWithTag("WayPoint");
         foreach (Transform t in patroll.transform)
@@ -33,6 +37,13 @@ public class WalkState : StateMachineBehaviour
         if (timer > 10)
         {
             animator.SetBool("isWalk", false);
+        }
+
+        float distance = Vector3.Distance(player.position, animator.transform.position);
+
+        if (distance < playerDistance)
+        {
+            animator.SetBool("isRun", true);
         }
     }
 
