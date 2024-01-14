@@ -942,9 +942,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3316677481632350401}
   - component: {fileID: 3671967748367172678}
+  - component: {fileID: 4547289694883008516}
   m_Layer: 6
   m_Name: Sword
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1021,6 +1022,20 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00033259392, y: 0.39903644, z: 0.00015873834}
     m_Extent: {x: 0.12029648, y: 0.5535716, z: 0.031875353}
   m_DirtyAABB: 0
+--- !u!64 &4547289694883008516
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2351266031357274961}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4686849319519084627, guid: 02165b8c9e350f749ba899eb7f5b1f18, type: 3}
 --- !u!1 &2424816308834950813
 GameObject:
   m_ObjectHideFlags: 0
@@ -4814,9 +4829,10 @@ GameObject:
   m_Component:
   - component: {fileID: 810249428313533463}
   - component: {fileID: 5561029024038269467}
+  - component: {fileID: 8835734762332914308}
   m_Layer: 6
   m_Name: Dagger
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4896,6 +4912,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.010191474, y: 0.18856028, z: 0.00015877932}
     m_Extent: {x: 0.0796061, y: 0.2839353, z: 0.019799046}
   m_DirtyAABB: 0
+--- !u!64 &8835734762332914308
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8635373344012329407}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8443918408634770226, guid: 02165b8c9e350f749ba899eb7f5b1f18, type: 3}
 --- !u!1 &8735187210229995788
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Fighter : MonoBehaviour
 {
     private Animator anim;
-    public float coolDownTime = 2f;
+    public float coolDownTime = 0f;
     private float nextFireTime = 0f;
     public static int noOfClick = 0;
     private float lastClickTime = 0;
@@ -25,7 +25,7 @@ public class Fighter : MonoBehaviour
         LeftAttack();
     }
 
-    private void RightAttack()
+    public void RightAttack()
     {
 
         if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f && anim.GetCurrentAnimatorStateInfo(0).IsName("hit2"))
@@ -40,7 +40,7 @@ public class Fighter : MonoBehaviour
 
         if (Time.time > nextFireTime)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButton(0))
             {
                 lastClickTime = Time.time;
                 noOfClick++;
@@ -50,7 +50,7 @@ public class Fighter : MonoBehaviour
                     anim.SetBool("hit2", true);
                 }
 
-                noOfClick = Mathf.Clamp(noOfClick, 0, 3);
+                noOfClick = Mathf.Clamp(noOfClick, 0, 10);
 
             }
 
@@ -76,7 +76,7 @@ public class Fighter : MonoBehaviour
 
         if (Time.time > nextFireTime)
         {
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButton(1))
             {
                 lastClickTime = Time.time;
                 noOfClick++;
@@ -86,7 +86,7 @@ public class Fighter : MonoBehaviour
                     anim.SetBool("hit1", true);
                 }
 
-                noOfClick = Mathf.Clamp(noOfClick, 0, 3);
+                noOfClick = Mathf.Clamp(noOfClick, 0, 10);
 
             }
 
