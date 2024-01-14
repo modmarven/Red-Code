@@ -45,7 +45,7 @@ public class WalkState : StateMachineBehaviour
 
         if (distance < playerDistance)
         {
-            AudioManager.instance.Play("Roar");
+            AudioManager.instance.Play("Angry");
             animator.SetBool("isRun", true);
         }
     }

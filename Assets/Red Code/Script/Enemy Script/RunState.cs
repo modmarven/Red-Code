@@ -29,7 +29,7 @@ public class RunState : StateMachineBehaviour
 
         if (distance > playerRange)
         {
-            AudioManager.instance.Stop("Roar");
+            AudioManager.instance.Stop("Angry");
             animator.SetBool("isRun", false );
         }
 

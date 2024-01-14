@@ -30,6 +30,7 @@ public class IdleState : StateMachineBehaviour
 
         if (distance < playerDistance)
         {
+            AudioManager.instance.Play("Angry");
             animator.SetBool("isRun", true);
         }
     }
