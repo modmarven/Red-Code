@@ -84,6 +84,20 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Roar
+    clip: {fileID: 8300000, guid: 987ba333251338847bcfec25cf380841, type: 3}
+    mixer: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Angry
+    clip: {fileID: 8300000, guid: be0c81ed780525b4a87cb6e90188a5b5, type: 3}
+    mixer: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
 --- !u!1 &635385384780777145
 GameObject:
   m_ObjectHideFlags: 0
