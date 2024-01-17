@@ -13,6 +13,9 @@ public class Fighter : MonoBehaviour
 
     public bool AttackInProgress { get; private set; } = false;
 
+    public MeshCollider sword;
+    public MeshCollider dagger;
+
     void Start()
     {
         anim = GetComponent<Animator>();   
@@ -84,6 +87,7 @@ public class Fighter : MonoBehaviour
                 if (noOfClick == 1)
                 {
                     anim.SetBool("hit1", true);
+                    sword.enabled = true;
                 }
 
                 noOfClick = Mathf.Clamp(noOfClick, 0, 10);
@@ -93,6 +97,7 @@ public class Fighter : MonoBehaviour
             else
             {
                 anim.SetBool("hit1", false);
+                sword.enabled = false;
             }
         }
     }
