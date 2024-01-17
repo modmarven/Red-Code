@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Red Code/Scene/Test.unity
-    guid: 79fdf0d3e15329841a90ac40488bac91
+    path: Assets/Red Code/Scene/Main Menu.unity
+    guid: b3b62c5c54eecc14d85155382a6df751
+  - enabled: 1
+    path: Assets/Red Code/Scene/Scene_A.unity
+    guid: c0d944ca9defd20449bc336e50d75a08
+  - enabled: 1
+    path: Assets/Red Code/Scene/Controll.unity
+    guid: 607e9641689602e43ab54a973a9bfd48
+  - enabled: 1
+    path: Assets/Red Code/Scene/Credit.unity
+    guid: 8b82d580e28aadc438fdacee2c133c7f
   m_configObjects: {}
